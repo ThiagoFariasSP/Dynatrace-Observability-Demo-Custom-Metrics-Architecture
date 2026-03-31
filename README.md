@@ -160,6 +160,11 @@ dynatrace-observability-demo/
 - Metric dimensions such as environment, service, or region
 
 ---
+## Diagrams
+
+- High-level architecture: see `architecture/architecture.mmd`
+- Sequence flow: see `architecture/sequence.mmd`
+- Components: see `architecture/components.mmd`
 
 ## Author
 
