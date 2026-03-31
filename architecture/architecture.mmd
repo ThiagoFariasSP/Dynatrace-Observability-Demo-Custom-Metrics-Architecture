@@ -1,0 +1,18 @@
+flowchart LR
+  subgraph AppSide["Your Environment"]
+    A["Python Metrics Publisher\n(app/send_metrics.py)"]
+  end
+
+  subgraph Dynatrace["Dynatrace SaaS"]
+    API["Metrics API v2\n/ api/v2/metrics/ingest"]
+    Store["Metrics Store\n(custom.*)"]
+    Explorer["Metrics Explorer / Data Explorer"]
+    Dash["Dashboards"]
+    Alert["Alerting / SLOs (optional)"]
+  end
+
+  A -->|"HTTP POST\ntext/plain metrics"| API
+  API --> Store
+  Store --> Explorer
+  Store --> Dash
+  Store --> Alert
