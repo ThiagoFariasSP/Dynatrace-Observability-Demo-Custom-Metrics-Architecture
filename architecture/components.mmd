@@ -1,1 +1,22 @@
-
++-------------------------+
+|  Python App             |
+|  send_metrics.py        |
++-----------+-------------+
+            |
+            | HTTPS POST (Metrics API v2)
+            v
++-------------------------+
+| Dynatrace SaaS          |
+| /api/v2/metrics/ingest  |
++-----------+-------------+
+            |
+            v
++-------------------------+
+| Custom Metrics Store    |
+| custom.app.*            |
++-----------+-------------+
+            |
+            +--> Metrics Explorer
+            +--> Dashboards
+            +--> Alerts/SLOs (optional)
+``
